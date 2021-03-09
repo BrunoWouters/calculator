@@ -6,8 +6,10 @@
 trigger:
 - master
 
-pool:
-  vmImage: ubuntu-latest
+  pool:
+    name: Default
+    demands:
+    - agent.name -equals DESKTOP-D3O8RB1
 
 steps:
 - task: NodeTool@0
